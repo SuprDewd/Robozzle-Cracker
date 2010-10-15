@@ -1,0 +1,7 @@
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\RobozzleCracker.dll
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\RobozzleCracker.pdb
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\SharpBag.dll
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\SharpBag.pdb
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.dll
+C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.pdb
