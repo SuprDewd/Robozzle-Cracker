@@ -11,6 +11,7 @@ namespace RobozzleCracker
         public int Y { get; private set; }
         public Direction Direction { get; private set; }
 
+        public Robot(int x, int y) : this(x, y, Direction.Up) {}
         public Robot(int x, int y, Direction direction)
         {
             this.X = x;

@@ -20,6 +20,8 @@ namespace RobozzleCracker
                     owner.Robot.Move(1);
                 }
 
+                owner.CurrentTile.HasStar = false;
+
                 return true;
 
             });

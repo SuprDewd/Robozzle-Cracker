@@ -24,7 +24,7 @@ namespace RobozzleCracker
                     return false;
                 }
 
-                if (this.NeedColor == Color.None || owner.CurrentTile.Color == this.NeedColor)
+                if (((owner.ReplaceAllowed & this.SetColor) == this.SetColor) && (this.NeedColor == Color.None || owner.CurrentTile.Color == this.NeedColor))
                 {
                     owner.CurrentTile.Color = this.SetColor;
                 }
