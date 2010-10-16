@@ -7,11 +7,11 @@ namespace RobozzleCracker
 {
     public class Robot
     {
-        public int X { get; private set; }
-        public int Y { get; private set; }
-        public Direction Direction { get; private set; }
+        public int X { get; internal set; }
+        public int Y { get; internal set; }
+        public Direction Direction { get; internal set; }
 
-        public Robot(int x, int y) : this(x, y, Direction.Up) {}
+        public Robot(int x, int y) : this(x, y, Direction.Up) { }
         public Robot(int x, int y, Direction direction)
         {
             this.X = x;
@@ -59,22 +59,22 @@ namespace RobozzleCracker
             }
         }
 
-        public void Move() {this.Move(1);}
+        public void Move() { this.Move(1); }
         public void Move(int i)
         {
             switch (this.Direction)
             {
                 case Direction.Up:
-                    this.Y += i;
-                    break;
-                case Direction.Down:
-                    this.Y -= i;
-                    break;
-                case Direction.Left:
                     this.X -= i;
                     break;
-                case Direction.Right:
+                case Direction.Down:
                     this.X += i;
+                    break;
+                case Direction.Left:
+                    this.Y -= i;
+                    break;
+                case Direction.Right:
+                    this.Y += i;
                     break;
                 default: throw new Exception("Robot moved in an invalid direction.");
             }

@@ -5,3 +5,10 @@ C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\Ro
 C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\RobozzleCracker.pdb
 C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\Program.exe
 C:\Users\SuprDewd\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\Program.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\Program.exe
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\Program.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\RobozzleCracker.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\RobozzleCracker.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\Program.exe
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\Program.pdb

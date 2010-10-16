@@ -14,18 +14,32 @@ namespace RobozzleCracker
             this.NeedColor = needColor;
         }
 
-        public abstract bool Execute(Robozzle owner);
+        public bool Execute(Robozzle owner)
+        {
+            return this.Execute(owner, 0);
+        }
 
-        public bool Execute(Func<bool> execution)
+        public abstract bool Execute(Robozzle owner, int depth);
+
+        protected bool Execute(Func<bool> execution, Robozzle owner, int depth)
         {
             try
             {
-                return execution();
+                if (depth >= Robozzle.MaxDepth) throw new Exception("Depth exceeded max depth.");
+
+                if (this.NeedColor == Color.None || owner.CurrentTile.Color == this.NeedColor)
+                {
+                    return execution();
+                }
+
+                return true;
             }
             catch
             {
                 return false;
             }
         }
+
+        public abstract string ToString();
     }
 }
