@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RobozzleCracker
+namespace Robozzle
 {
     public abstract class Instruction
     {
-        public Color NeedColor { get; private set; }
+        public Color NeedColor { get; set; }
 
         public Instruction(Color needColor)
         {
             this.NeedColor = needColor;
         }
 
-        public bool Execute(Robozzle owner)
+        public bool Execute(RobozzlePuzzle owner)
         {
             return this.Execute(owner, 0);
         }
 
-        public abstract bool Execute(Robozzle owner, int depth);
+        public abstract bool Execute(RobozzlePuzzle owner, int depth);
 
-        protected bool Execute(Func<bool> execution, Robozzle owner, int depth)
+        protected bool Execute(Func<bool> execution, RobozzlePuzzle owner, int depth)
         {
             try
             {
-                if (depth >= Robozzle.MaxDepth) throw new Exception("Depth exceeded max depth.");
+                if (depth >= RobozzlePuzzle.MaxDepth) throw new Exception("Depth exceeded max depth.");
 
                 if (this.NeedColor == Color.None || owner.CurrentTile.Color == this.NeedColor)
                 {
@@ -40,6 +40,6 @@ namespace RobozzleCracker
             }
         }
 
-        public abstract string ToString();
+        public new abstract string ToString();
     }
 }

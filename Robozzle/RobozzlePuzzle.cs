@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 
-namespace RobozzleCracker
+namespace Robozzle
 {
-    public class Robozzle
+    public class RobozzlePuzzle
     {
         public Tile[,] Board { get; private set; }
         public Color ReplaceAllowed { get; private set; }
         public Robot Robot { get; private set; }
         public Tile CurrentTile { get { return this.Board[this.Robot.X, this.Robot.Y]; } }
         public int StarsLeft { get; private set; }
-        public Instruction[][] Functions { get; private set; }
+        public Instruction[][] Functions { get; set; }
+        public event Action<RobozzlePuzzle> OnRunStep;
 
         public const int MaxDepth = 500;
 
-        public Robozzle(Tile[,] board, Robot robot, Instruction[][] functions) : this(board, robot, functions, Color.None) { }
-        public Robozzle(Tile[,] board, Robot robot, Instruction[][] functions, Color replaceAllowed)
+        public RobozzlePuzzle(Tile[,] board, Robot robot, Instruction[][] functions) : this(board, robot, functions, Color.None) { }
+        public RobozzlePuzzle(Tile[,] board, Robot robot, Instruction[][] functions, Color replaceAllowed)
         {
             this.Board = board;
             this.Robot = robot;
@@ -36,7 +37,7 @@ namespace RobozzleCracker
             {
                 for (int y = 0; y < this.Board.GetLength(1); y++)
                 {
-                    if (this.Board[x, y].HasStar) stars++;
+                    if (this.Board[x, y] != null && this.Board[x, y].HasStar) stars++;
                 }
             }
 
@@ -69,24 +70,38 @@ namespace RobozzleCracker
             }
         }
 
+        internal void CallOnRunStep()
+        {
+            if (this.OnRunStep != null)
+            {
+                this.OnRunStep(this);
+            }
+        }
+
         public bool Run()
         {
             try
             {
-                for (int i = 0; i < this.Functions[0].Length; i++)
+                lock (this.Functions)
                 {
-                    if (this.StarsLeft == 0) return true;
-
-                    Instruction func = this.Functions[0][i];
-                    if (func == null) continue;
-
-                    if (!func.Execute(this))
+                    for (int i = 0; i < this.Functions[0].Length; i++)
                     {
-                        return false;
-                    }
-                }
+                        this.CallOnRunStep();
 
-                return this.StarsLeft == 0;
+                        if (this.StarsLeft == 0) return true;
+
+                        Instruction func = this.Functions[0][i];
+                        if (func == null) continue;
+
+                        if (!func.Execute(this))
+                        {
+                            this.CallOnRunStep();
+                            return false;
+                        }
+                    }
+
+                    return this.StarsLeft == 0;
+                }
             }
             catch
             {

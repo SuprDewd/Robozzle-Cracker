@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RobozzleCracker
+namespace Robozzle
 {
-    public class CallFunction : Instruction
+    public class CallFunction : Instruction, ICloneable<CallFunction>
     {
         public int Function { get; private set; }
 
@@ -13,22 +13,25 @@ namespace RobozzleCracker
         public CallFunction(int function, Color needColor)
             : base(needColor)
         {
+            this.Function = function;
         }
 
-        public override bool Execute(Robozzle owner, int depth)
+        public override bool Execute(RobozzlePuzzle owner, int depth)
         {
             return base.Execute(() =>
             {
                 for (int i = 0; i < owner.Functions[this.Function].Length; i++)
                 {
-                    if (owner.StarsLeft == 0) return true;
+                    owner.CallOnRunStep();
 
+                    if (owner.StarsLeft == 0) return true;
 
                     Instruction func = owner.Functions[this.Function][i];
                     if (func == null) continue;
 
                     if (!func.Execute(owner, depth + 1))
                     {
+                        owner.CallOnRunStep();
                         return false;
                     }
                 }

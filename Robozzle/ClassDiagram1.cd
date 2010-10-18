@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RobozzlePuzzle.TurnRobot">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TurnRobot.cs</FileName>
+      <NewMemberFileName>MoveRobot.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.ChangeColor">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ChangeColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.Instruction">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Instruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.Robot">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIACAAAAACAAAAAAAAAAAEAAAAAAAAAAYAA=</HashCode>
+      <FileName>Robot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.Tile">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAkAAAAAA=</HashCode>
+      <FileName>Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.RobozzlePuzzle">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIYAAABAAAAEAAACIABAAAAAAAAAAIACEAACI=</HashCode>
+      <FileName>RobozzlePuzzle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.CallFunction">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CallFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RobozzlePuzzle.MoveRobot">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveRobot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="RobozzlePuzzle.Color">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABEAAAA=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RobozzlePuzzle.Direction">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Enums.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

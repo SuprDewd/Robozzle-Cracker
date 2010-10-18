@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RobozzleCracker
+namespace Robozzle
 {
     public class Tile
     {
@@ -11,7 +11,7 @@ namespace RobozzleCracker
         public bool HasStar { get; internal set; }
         public bool IsEmpty { get; private set; }
 
-        private static Color[] AllowedColors = new Color[] { Color.Red, Color.Green, Color.Blue }; 
+        private static Color[] AllowedColors = new Color[] { Color.Red, Color.Green, Color.Blue };
 
         public Tile() : this(Color.None, false, true) { }
         public Tile(Color color) : this(color, false, false) { }
@@ -25,5 +25,7 @@ namespace RobozzleCracker
             this.HasStar = (isEmpty ? false : hasStar);
             this.IsEmpty = isEmpty;
         }
+
+        public static Tile Empty { get { return new Tile(); } }
     }
 }

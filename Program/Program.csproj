@@ -47,9 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RobozzleCracker\RobozzleCracker.csproj">
+    <ProjectReference Include="..\Robozzle\Robozzle.csproj">
       <Project>{746523F3-E63E-4B4D-8F83-D1E6A4A51F02}</Project>
-      <Name>RobozzleCracker</Name>
+      <Name>Robozzle</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

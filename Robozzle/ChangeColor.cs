@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RobozzleCracker
+namespace Robozzle
 {
     public class ChangeColor : Instruction
     {
@@ -16,7 +16,7 @@ namespace RobozzleCracker
             this.SetColor = setColor;
         }
 
-        public override bool Execute(Robozzle owner, int depth)
+        public override bool Execute(RobozzlePuzzle owner, int depth)
         {
             return base.Execute(() =>
             {

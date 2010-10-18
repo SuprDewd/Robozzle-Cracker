@@ -1,0 +1,8 @@
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\RobozzleCracker.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\RobozzleCracker.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\SharpBag.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\MySql.Data.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\SharpBag.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.pdb

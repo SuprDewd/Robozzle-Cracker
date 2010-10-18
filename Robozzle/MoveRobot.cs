@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RobozzleCracker
+namespace Robozzle
 {
     public class MoveRobot : Instruction
     {
@@ -13,13 +13,13 @@ namespace RobozzleCracker
         {
         }
 
-        public override bool Execute(Robozzle owner, int depth)
+        public override bool Execute(RobozzlePuzzle owner, int depth)
         {
             return base.Execute(() =>
             {
                 owner.Robot.Move(1);
 
-                if (owner.Robot.X < 0 || owner.Robot.Y < 0 || owner.Robot.X >= owner.Board.GetLength(0) || owner.Robot.Y >= owner.Board.GetLength(1)) return false;
+                if (owner.Robot.X < 0 || owner.Robot.Y < 0 || owner.Robot.X >= owner.Board.GetLength(0) || owner.Robot.Y >= owner.Board.GetLength(1) || owner.CurrentTile.IsEmpty) return false;
 
                 owner.RemoveStar(owner.CurrentTile);
 

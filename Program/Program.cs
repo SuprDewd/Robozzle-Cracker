@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using RobozzleCracker;
+using Robozzle;
 
 namespace Program
 {
@@ -10,7 +10,7 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Instruction[] funcs = {
+            /*Instruction[] funcs = {
                                       null,
                                       new MoveRobot(),
                                       new TurnRobot(Direction.Left),
@@ -36,59 +36,56 @@ namespace Program
             foreach (Instruction func in solution)
             {
                 Console.WriteLine(func != null ? func.ToString() : "");
-            }
+            }*/
 
+
+            /*Instruction[] funcs = new Instruction[10] { new MoveRobot(), new MoveRobot(), new TurnRobot(Direction.Left), new TurnRobot(Direction.Left), new MoveRobot(), new MoveRobot(), new MoveRobot(), new MoveRobot(), null, null };
+
+            Tile[,] tiles = {
+                            
+                                {Tile.Empty, new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), Tile.Empty },
+                                {new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue) },
+                                {new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue) },
+                                {new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue) },
+                                {Tile.Empty, new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), Tile.Empty }
+
+                            };
+
+            Robot robot = new Robot(2, 3, Direction.Right);*/
+
+            Instruction[][] funcs = new Instruction[][]
+            {
+            
+                new Instruction[5] { new MoveRobot(), new MoveRobot(Color.Blue), new TurnRobot(Direction.Right, Color.Red), new CallFunction(1, Color.Green), new CallFunction(0) },
+                new Instruction[5] { new MoveRobot(), new MoveRobot(Color.Green), new TurnRobot(Direction.Left, Color.Red), new CallFunction(0, Color.Blue), new CallFunction(1) }
+            
+            };
+
+            Robot robot = new Robot(11, 0, Direction.Up);
+
+            Tile[,] tiles = {
+                            
+                                {new Tile(Color.Red), new Tile(Color.Blue), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Blue), new Tile(Color.Red), Tile.Empty,new Tile(Color.Red), new Tile(Color.Blue), new Tile(Color.Red), Tile.Empty,new Tile(Color.Red), new Tile(Color.Blue), new Tile(Color.Red), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
+                                {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green, true)}
+                            
+                            };
+
+            RobozzlePuzzle r = new RobozzlePuzzle(tiles, robot, funcs);
+            //r.OnRunStep += rob => { PrintBoard(rob); System.Threading.Thread.Sleep(50); };
+
+            Console.WriteLine(r.Run());
 
             Console.ReadLine();
-        }
-
-        static void PrintBoard(Robozzle r)
-        {
-            for (int i = 0; i < r.Board.GetLength(0); i++)
-            {
-                for (int j = 0; j < r.Board.GetLength(1); j++)
-                {
-                    switch (r.Board[i, j].Color)
-                    {
-                        case Color.Red:
-                            Console.BackgroundColor = ConsoleColor.Red;
-                            break;
-                        case Color.Blue:
-                            Console.BackgroundColor = ConsoleColor.Blue;
-                            break;
-                        case Color.Green:
-                            Console.BackgroundColor = ConsoleColor.Green;
-                            break;
-                    }
-
-                    if (r.Robot.X == i && r.Robot.Y == j)
-                    {
-                        switch (r.Robot.Direction)
-                        {
-                            case Direction.Up:
-                                Console.Write("-");
-                                break;
-                            case Direction.Down:
-                                Console.Write("_");
-                                break;
-                            case Direction.Left:
-                                Console.Write("<");
-                                break;
-                            case Direction.Right:
-                                Console.Write(">");
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        Console.Write(r.Board[i, j].IsEmpty ? " " : r.Board[i, j].HasStar ? "*" : "#");
-                    }
-
-                    Console.BackgroundColor = ConsoleColor.Black;
-                }
-
-                Console.WriteLine();
-            }
         }
     }
 }
