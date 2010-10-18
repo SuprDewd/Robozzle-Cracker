@@ -12,3 +12,5 @@ C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\Robo
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\Program.exe
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\obj\x86\Debug\Program.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\Robozzle.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Program\bin\Debug\Robozzle.pdb

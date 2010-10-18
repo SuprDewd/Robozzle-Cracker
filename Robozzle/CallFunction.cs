@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Robozzle
 {
-    public class CallFunction : Instruction, ICloneable<CallFunction>
+    public class CallFunction : Instruction
     {
         public int Function { get; private set; }
 

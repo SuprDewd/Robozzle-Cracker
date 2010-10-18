@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Robozzle;
+using RobozzleCracker;
 
 namespace Program
 {
@@ -56,8 +57,9 @@ namespace Program
             Instruction[][] funcs = new Instruction[][]
             {
             
-                new Instruction[5] { new MoveRobot(), new MoveRobot(Color.Blue), new TurnRobot(Direction.Right, Color.Red), new CallFunction(1, Color.Green), new CallFunction(0) },
-                new Instruction[5] { new MoveRobot(), new MoveRobot(Color.Green), new TurnRobot(Direction.Left, Color.Red), new CallFunction(0, Color.Blue), new CallFunction(1) }
+               //new Instruction[]{new TurnRobot(Direction.Left), new CallFunction(0)}
+               new Instruction[5] { new MoveRobot(), new MoveRobot(Color.Blue), new TurnRobot(Direction.Right, Color.Red), new CallFunction(1, Color.Green), new CallFunction(0) },
+               new Instruction[5] { new MoveRobot(), new MoveRobot(Color.Green), new TurnRobot(Direction.Left, Color.Red), new CallFunction(0, Color.Blue), new CallFunction(1) }
             
             };
 
@@ -81,7 +83,7 @@ namespace Program
                             };
 
             RobozzlePuzzle r = new RobozzlePuzzle(tiles, robot, funcs);
-            //r.OnRunStep += rob => { PrintBoard(rob); System.Threading.Thread.Sleep(50); };
+            r.OnRunStep += rob => { rob.Print(); System.Threading.Thread.Sleep(50); };
 
             Console.WriteLine(r.Run());
 

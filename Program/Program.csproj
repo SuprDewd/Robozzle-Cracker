@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RobozzleCracker\RobozzleCracker.csproj">
+      <Project>{7FD163A3-5878-4A6B-9463-34C1EA72755C}</Project>
+      <Name>RobozzleCracker</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Robozzle\Robozzle.csproj">
       <Project>{746523F3-E63E-4B4D-8F83-D1E6A4A51F02}</Project>
       <Name>Robozzle</Name>

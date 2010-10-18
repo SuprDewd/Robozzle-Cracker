@@ -3,3 +3,10 @@ C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\Robozz
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\RobozzleCracker\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.dll
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\RobozzleCracker.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\RobozzleCracker.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\Robozzle.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\Debug\Robozzle.pdb

@@ -6,3 +6,11 @@ C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\bin\De
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.dll
 C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\RobozzleCracker\obj\Debug\RobozzleCracker.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\bin\Debug\Robozzle.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\bin\Debug\Robozzle.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\bin\Debug\SharpBag.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\bin\Debug\MySql.Data.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\bin\Debug\SharpBag.pdb
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\obj\Debug\Robozzle.dll
+C:\Users\Bjarki\Desktop\Projects\Forritun\RobozzleCracker\Robozzle\obj\Debug\Robozzle.pdb
