@@ -11,8 +11,7 @@ namespace Robozzle
         public int Y { get; internal set; }
         public Direction Direction { get; internal set; }
 
-        public Robot(int x, int y) : this(x, y, Direction.Up) { }
-        public Robot(int x, int y, Direction direction)
+        public Robot(int x, int y, Direction direction = Direction.Up)
         {
             this.X = x;
             this.Y = y;

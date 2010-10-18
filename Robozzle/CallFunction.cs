@@ -9,8 +9,7 @@ namespace Robozzle
     {
         public int Function { get; private set; }
 
-        public CallFunction(int function) : this(function, Color.None) { }
-        public CallFunction(int function, Color needColor)
+        public CallFunction(int function = 0, Color needColor = Color.None)
             : base(needColor)
         {
             this.Function = function;

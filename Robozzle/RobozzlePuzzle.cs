@@ -18,8 +18,7 @@ namespace Robozzle
 
         public const int MaxDepth = 500;
 
-        public RobozzlePuzzle(Tile[,] board, Robot robot, Instruction[][] functions) : this(board, robot, functions, Color.None) { }
-        public RobozzlePuzzle(Tile[,] board, Robot robot, Instruction[][] functions, Color replaceAllowed)
+        public RobozzlePuzzle(Tile[,] board, Robot robot, Instruction[][] functions, Color replaceAllowed = Color.None)
         {
             this.Board = board;
             this.Robot = robot;

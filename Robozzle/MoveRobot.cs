@@ -7,8 +7,7 @@ namespace Robozzle
 {
     public class MoveRobot : Instruction
     {
-        public MoveRobot() : this(Color.None) { }
-        public MoveRobot(Color needColor)
+        public MoveRobot(Color needColor = Color.None)
             : base(needColor)
         {
         }

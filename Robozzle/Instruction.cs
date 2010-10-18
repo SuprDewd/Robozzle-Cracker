@@ -14,12 +14,7 @@ namespace Robozzle
             this.NeedColor = needColor;
         }
 
-        public bool Execute(RobozzlePuzzle owner)
-        {
-            return this.Execute(owner, 0);
-        }
-
-        public abstract bool Execute(RobozzlePuzzle owner, int depth);
+        public abstract bool Execute(RobozzlePuzzle owner, int depth = 0);
 
         protected bool Execute(Func<bool> execution, RobozzlePuzzle owner, int depth)
         {

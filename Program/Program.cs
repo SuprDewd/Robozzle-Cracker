@@ -54,7 +54,7 @@ namespace Program
 
             Robot robot = new Robot(2, 3, Direction.Right);*/
 
-            Instruction[][] funcs = new Instruction[][]
+            /*Instruction[][] funcs = new Instruction[][]
             {
             
                //new Instruction[]{new TurnRobot(Direction.Left), new CallFunction(0)}
@@ -80,10 +80,39 @@ namespace Program
                                 {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty, new Tile(Color.Blue), Tile.Empty, new Tile(Color.Green), Tile.Empty},
                                 {new Tile(Color.Blue), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green), new Tile(Color.Red), Tile.Empty, new Tile(Color.Red), new Tile(Color.Green, true)}
                             
-                            };
+                            };*/
+
+            /*Instruction[][] funcs = new Instruction[][] {
+                new Instruction[4]{ new MoveRobot(), new TurnRobot(Direction.Right, Color.Green), new TurnRobot(Direction.Left, Color.Red), new CallFunction(0) }
+            };
+
+            Robot robot = new Robot(2, 0, Direction.Up);
+
+            Tile[,] tiles = new Tile[,] {
+            
+                {new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green), new Tile(Color.Green) },
+                {new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue) },
+                {new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue) },
+                {new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue) },
+                {new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue), new Tile(Color.Blue, true) },
+                {new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red), new Tile(Color.Red)}
+
+            };*/
+
+            Instruction[][] funcs = new Instruction[][] {
+                new Instruction[6]{ new MoveRobot(), new TurnRobot(Direction.Right, Color.Red), new TurnRobot(Direction.Right, Color.Red), new CallFunction(0), null, null }
+            };
+
+            Robot robot = new Robot(0, 8, Direction.Left);
+
+            Tile[,] tiles = new Tile[,] {
+            
+                {new Tile(Color.Red), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue), new Tile(Color.Blue, true), new Tile(Color.Blue, true), new Tile(Color.Blue, true), new Tile(Color.Blue, true), new Tile(Color.Blue, true), new Tile(Color.Blue, true), new Tile(Color.Blue, true)}
+
+            };
 
             RobozzlePuzzle r = new RobozzlePuzzle(tiles, robot, funcs);
-            r.OnRunStep += rob => { rob.Print(); System.Threading.Thread.Sleep(50); };
+            r.OnRunStep += rob => { rob.Print(); System.Threading.Thread.Sleep(100); };
 
             Console.WriteLine(r.Run());
 

@@ -9,8 +9,7 @@ namespace Robozzle
     {
         public Direction Direction { get; private set; }
 
-        public TurnRobot(Direction dir) : this(dir, Color.None) { }
-        public TurnRobot(Direction dir, Color needColor)
+        public TurnRobot(Direction dir, Color needColor = Color.None)
             : base(needColor)
         {
             this.Direction = dir;

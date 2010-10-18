@@ -9,9 +9,7 @@ namespace Robozzle
     {
         public Color SetColor { get; private set; }
 
-        public ChangeColor(Color setColor) : this(setColor, Color.None) { }
-        public ChangeColor(Color setColor, Color needColor)
-            : base(needColor)
+        public ChangeColor(Color setColor, Color needColor = Color.None) : base(needColor)
         {
             this.SetColor = setColor;
         }
